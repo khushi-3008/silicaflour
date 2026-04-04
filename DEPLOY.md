@@ -1,6 +1,8 @@
 # Deployment: GitHub Pages + Vercel
 
-This site is static HTML/CSS/JS. You can deploy it in two ways. **Pick one host for your custom domain** (`silicaflour.in`) so DNS points to a single place; the other can stay as a free `*.github.io` or `*.vercel.app` URL for backups or previews.
+This site is a **single-page** static app: all content lives in **`index.html`** (anchor sections). There is no build step—only **`assets/css/styles.css`**, **`assets/js/main.js`**, and optional images.
+
+You can deploy in two ways. **Pick one host for your custom domain** (`silicaflour.in`) so DNS points to a single place; the other can stay as a free `*.github.io` or `*.vercel.app` URL for backups or previews.
 
 ---
 
@@ -102,8 +104,9 @@ The form posts to **Formspree** (see below). It works the same on GitHub Pages a
 ## Part C — Formspree (both hosts)
 
 1. Create a form at [Formspree](https://formspree.io/).
-2. In **`contact.html`**, set `action` to `https://formspree.io/f/<your-id>`.
-3. **`_next`** should match your **live** site URL (e.g. `https://silicaflour.in/contact.html?thanks=1`).
+2. In **`index.html`** (contact section form), set `action` to `https://formspree.io/f/<your-id>` (replace `YOUR_FORMSPREE_ID`).
+3. **`_next`** should match your **live** home URL with the thank-you query string, e.g. **`https://silicaflour.in/?thanks=1`**. That shows the success message in the **Contact** section after redirect.
+4. If you test on `*.github.io` or `*.vercel.app` before the custom domain is live, temporarily set `_next` to that origin with `/?thanks=1`.
 
 ---
 
@@ -123,7 +126,8 @@ Use **one** primary domain target for `silicaflour.in`; use the other platform w
 ## Troubleshooting
 
 - **Pages Actions fail**: **Settings → Actions → General** → allow workflows; **Pages** source must be **GitHub Actions** when using the included workflow.
-- **404 on deep links**: This site uses `*.html` URLs; both hosts serve them as static files—no extra rewrite needed.
-- **Form redirect after submit**: `contact.html` `_next` must use the exact URL visitors use (custom domain vs `github.io` vs `vercel.app`).
+- **404 on old URLs**: Older deployments may have linked to `about.html`, `contact.html`, etc. Those files were removed; use **`/`** only. Optionally add static redirects on the host if you need legacy URLs.
+- **Form redirect after submit**: The form’s `_next` must use the exact origin visitors use (custom domain vs `github.io` vs `vercel.app`), always ending with **`/?thanks=1`**.
+- **Vercel / “main.py” / Python runtime**: This project has **no** Python files. If a platform tries to run Python, set the project to **Other** / static and remove any accidental `main.py` or `requirements.txt` from the repo.
 
 DNS details change over time; follow current [GitHub Pages custom domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site) and [Vercel domains](https://vercel.com/docs/domains/working-with-domains) documentation.

@@ -9,16 +9,16 @@
   --color-text: #f2f2f2;
   --color-text-muted: #9a9a9a;
   --color-border: #262626;
-  --color-accent: #2f7d4f;
-  --color-accent-hover: #3d9461;
-  --color-accent-soft: #256645;
+  --color-accent: #86bc25;
+  --color-accent-hover: #9bc42e;
+  --color-accent-soft: #6a8e1c;
   --color-rule: #404040;
   --color-logo-gray: #8c8c8c;
   --color-header-bg: #000000;
   --color-header-border: #1f1f1f;
   --color-header-text: #f0f0f0;
   --color-header-text-muted: #8a8a8a;
-  --color-header-hover: #7aaf8f;
+  --color-header-hover: #bdd96a;
   --shadow-inset-top: inset 0 1px 0 rgb(255 255 255 / 0.06);
   --shadow-card: 0 12px 40px rgb(0 0 0 / 0.5);
   --shadow-card-hover: 0 20px 50px rgb(0 0 0 / 0.6);
@@ -225,8 +225,8 @@ a:hover {
   width: 1.75rem;
   height: 1.75rem;
   border-radius: 8px;
-  background: rgb(47 125 79 / 0.1);
-  border: 1px solid rgb(47 125 79 / 0.2);
+  background: rgb(134 188 37 / 0.1);
+  border: 1px solid rgb(134 188 37 / 0.2);
   color: var(--color-accent-soft);
 }
 
@@ -520,7 +520,7 @@ a:hover {
 }
 
 .nav__link--cta.is-active {
-  background: rgb(47 125 79 / 0.2);
+  background: rgb(134 188 37 / 0.2);
   border-color: var(--color-accent-hover);
   color: #e8f2ec;
 }
@@ -686,11 +686,11 @@ a:hover {
 .btn--outline {
   background: var(--color-surface-raised);
   color: var(--color-accent);
-  border-color: rgb(47 125 79 / 0.4);
+  border-color: rgb(134 188 37 / 0.4);
 }
 
 .btn--outline:hover {
-  background: rgb(47 125 79 / 0.12);
+  background: rgb(134 188 37 / 0.12);
   border-color: var(--color-accent-hover);
   color: var(--color-accent-hover);
 }
@@ -725,20 +725,20 @@ a:hover {
 
 .section--industries {
   background:
-    radial-gradient(120% 80% at 50% -20%, rgb(47 125 79 / 0.08) 0%, transparent 55%),
+    radial-gradient(120% 80% at 50% -20%, rgb(134 188 37 / 0.08) 0%, transparent 55%),
     linear-gradient(180deg, #0a0a0a 0%, var(--color-bg) 42%);
   border-block: 1px solid var(--color-border);
 }
 
 .section--why {
   background:
-    radial-gradient(85% 55% at 15% 0%, rgb(47 125 79 / 0.06) 0%, transparent 52%),
+    radial-gradient(85% 55% at 15% 0%, rgb(134 188 37 / 0.06) 0%, transparent 52%),
     var(--color-bg-alt);
 }
 
 .section--process {
   background:
-    radial-gradient(95% 45% at 50% 0%, rgb(47 125 79 / 0.07) 0%, transparent 48%),
+    radial-gradient(95% 45% at 50% 0%, rgb(134 188 37 / 0.07) 0%, transparent 48%),
     var(--color-bg-alt);
 }
 
@@ -833,7 +833,7 @@ a:hover {
 
 .section--about {
   background:
-    radial-gradient(75% 45% at 12% 0%, rgb(47 125 79 / 0.06) 0%, transparent 52%),
+    radial-gradient(75% 45% at 12% 0%, rgb(134 188 37 / 0.06) 0%, transparent 52%),
     var(--color-bg);
 }
 
@@ -852,7 +852,7 @@ a:hover {
   padding: var(--sp-4) var(--sp-4) var(--sp-4) var(--sp-5);
   border-left: 3px solid var(--color-accent);
   border-radius: 0 10px 10px 0;
-  background: linear-gradient(100deg, rgb(47 125 79 / 0.1) 0%, rgba(24, 28, 36, 0.9) 55%, transparent 100%);
+  background: linear-gradient(100deg, rgb(134 188 37 / 0.1) 0%, rgba(24, 28, 36, 0.9) 55%, transparent 100%);
   box-shadow: var(--shadow-inset-top), 0 12px 36px rgba(0, 0, 0, 0.35);
 }
 
@@ -877,8 +877,8 @@ a:hover {
   background: linear-gradient(
     180deg,
     var(--color-accent) 0%,
-    rgb(47 125 79 / 0.25) 55%,
-    rgb(47 125 79 / 0.08) 100%
+    rgb(134 188 37 / 0.25) 55%,
+    rgb(134 188 37 / 0.08) 100%
   );
   border-radius: 1px;
 }
@@ -912,14 +912,14 @@ a:hover {
 .milestone-track__body {
   padding: var(--sp-3) var(--sp-4);
   border-radius: 10px;
-  border: 1px solid rgb(47 125 79 / 0.14);
+  border: 1px solid rgb(134 188 37 / 0.14);
   background: var(--color-surface);
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .milestone-track__item:hover .milestone-track__body {
-  border-color: rgb(47 125 79 / 0.28);
+  border-color: rgb(134 188 37 / 0.28);
   box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45);
 }
 
@@ -975,7 +975,7 @@ a:hover {
   position: sticky;
   top: calc(var(--header-height-mobile) + var(--sp-3));
   padding: var(--sp-2) var(--sp-4) var(--sp-4);
-  border: 1px solid rgb(47 125 79 / 0.18);
+  border: 1px solid rgb(134 188 37 / 0.18);
   border-radius: 12px;
   box-shadow: var(--shadow-inset-top), var(--shadow-card);
   background: linear-gradient(165deg, #111111 0%, var(--color-surface) 42%);
@@ -1007,8 +1007,8 @@ a:hover {
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 10px;
-  background: linear-gradient(155deg, rgb(47 125 79 / 0.14) 0%, rgba(255, 255, 255, 0.04) 100%);
-  border: 1px solid rgb(47 125 79 / 0.2);
+  background: linear-gradient(155deg, rgb(134 188 37 / 0.14) 0%, rgba(255, 255, 255, 0.04) 100%);
+  border: 1px solid rgb(134 188 37 / 0.2);
   box-shadow: var(--shadow-inset-top);
 }
 
@@ -1098,8 +1098,8 @@ a:hover {
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--color-accent-hover);
-  background: rgb(47 125 79 / 0.1);
-  border: 1px solid rgb(47 125 79 / 0.22);
+  background: rgb(134 188 37 / 0.1);
+  border: 1px solid rgb(134 188 37 / 0.22);
   border-radius: 4px;
 }
 
@@ -1149,7 +1149,7 @@ a:hover {
   flex-direction: column;
   height: 100%;
   padding: var(--sp-5) var(--sp-4) var(--sp-4);
-  border: 1px solid rgb(47 125 79 / 0.16);
+  border: 1px solid rgb(134 188 37 / 0.16);
   border-radius: 10px;
   box-shadow: var(--shadow-inset-top), 0 10px 32px rgba(0, 0, 0, 0.4);
   overflow: hidden;
@@ -1172,7 +1172,7 @@ a:hover {
 
 .card--icon:hover {
   transform: translateY(-4px);
-  border-color: rgb(47 125 79 / 0.3);
+  border-color: rgb(134 188 37 / 0.3);
   box-shadow: var(--shadow-inset-top), var(--shadow-card-hover);
 }
 
@@ -1184,8 +1184,8 @@ a:hover {
   height: 3.25rem;
   margin-bottom: var(--sp-3);
   border-radius: 12px;
-  background: linear-gradient(155deg, rgb(47 125 79 / 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
-  border: 1px solid rgb(47 125 79 / 0.18);
+  background: linear-gradient(155deg, rgb(134 188 37 / 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
+  border: 1px solid rgb(134 188 37 / 0.18);
   box-shadow: var(--shadow-inset-top);
 }
 
@@ -1260,7 +1260,7 @@ a:hover {
   height: 100%;
   margin: 0;
   padding: var(--sp-5) var(--sp-4) var(--sp-4);
-  border: 1px solid rgb(47 125 79 / 0.16);
+  border: 1px solid rgb(134 188 37 / 0.16);
   border-radius: 10px;
   box-shadow: var(--shadow-inset-top), 0 8px 28px rgba(0, 0, 0, 0.38);
   transition:
@@ -1271,7 +1271,7 @@ a:hover {
 
 .card--process-step:hover {
   transform: translateY(-3px);
-  border-color: rgb(47 125 79 / 0.28);
+  border-color: rgb(134 188 37 / 0.28);
   box-shadow: var(--shadow-inset-top), 0 14px 36px rgba(0, 0, 0, 0.48);
 }
 
@@ -1297,8 +1297,8 @@ a:hover {
   height: 2.875rem;
   margin-bottom: var(--sp-3);
   border-radius: 10px;
-  background: linear-gradient(155deg, rgb(47 125 79 / 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
-  border: 1px solid rgb(47 125 79 / 0.16);
+  background: linear-gradient(155deg, rgb(134 188 37 / 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
+  border: 1px solid rgb(134 188 37 / 0.16);
   box-shadow: var(--shadow-inset-top);
 }
 
@@ -1357,7 +1357,7 @@ a:hover {
   flex-direction: column;
   height: 100%;
   padding: var(--sp-4);
-  border: 1px solid rgb(47 125 79 / 0.14);
+  border: 1px solid rgb(134 188 37 / 0.14);
   border-radius: 10px;
   background: var(--color-surface);
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
@@ -1367,7 +1367,7 @@ a:hover {
 }
 
 .quality-pillar:hover {
-  border-color: rgb(47 125 79 / 0.28);
+  border-color: rgb(134 188 37 / 0.28);
   box-shadow: 0 10px 32px rgba(0, 0, 0, 0.45);
 }
 
@@ -1379,8 +1379,8 @@ a:hover {
   height: 2.75rem;
   margin-bottom: var(--sp-3);
   border-radius: 10px;
-  background: rgb(47 125 79 / 0.1);
-  border: 1px solid rgb(47 125 79 / 0.16);
+  background: rgb(134 188 37 / 0.1);
+  border: 1px solid rgb(134 188 37 / 0.16);
 }
 
 .quality-pillar__icon {
@@ -1422,8 +1422,8 @@ a:hover {
   gap: var(--sp-4);
   padding: var(--sp-5) var(--sp-5);
   border-radius: 10px;
-  border: 1px solid rgb(47 125 79 / 0.2);
-  background: linear-gradient(135deg, rgb(47 125 79 / 0.08) 0%, var(--color-surface) 55%);
+  border: 1px solid rgb(134 188 37 / 0.2);
+  background: linear-gradient(135deg, rgb(134 188 37 / 0.08) 0%, var(--color-surface) 55%);
   box-shadow: var(--shadow-inset-top), 0 12px 36px rgba(0, 0, 0, 0.4);
 }
 
@@ -1472,7 +1472,7 @@ a:hover {
 }
 
 .card--product:hover {
-  border-color: rgb(47 125 79 / 0.35);
+  border-color: rgb(134 188 37 / 0.35);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
 }
 
@@ -1568,7 +1568,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   height: 100%;
-  border: 1px solid rgb(47 125 79 / 0.16);
+  border: 1px solid rgb(134 188 37 / 0.16);
   border-radius: 10px;
   background: var(--color-surface);
   padding: var(--sp-4) var(--sp-4) var(--sp-3);
@@ -1593,7 +1593,7 @@ a:hover {
 
 .industry-card:hover {
   transform: translateY(-5px);
-  border-color: rgb(47 125 79 / 0.32);
+  border-color: rgb(134 188 37 / 0.32);
   box-shadow: var(--shadow-inset-top), var(--shadow-card-hover);
 }
 
@@ -1605,8 +1605,8 @@ a:hover {
   height: 3.375rem;
   margin-bottom: var(--sp-3);
   border-radius: 12px;
-  background: linear-gradient(155deg, rgb(47 125 79 / 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
-  border: 1px solid rgb(47 125 79 / 0.18);
+  background: linear-gradient(155deg, rgb(134 188 37 / 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
+  border: 1px solid rgb(134 188 37 / 0.18);
   box-shadow: var(--shadow-inset-top);
 }
 
@@ -1745,7 +1745,7 @@ a:hover {
 /* Product specification table — premium B2B treatment */
 .table-wrap--spec {
   margin-top: var(--sp-6);
-  border: 1px solid rgb(47 125 79 / 0.2);
+  border: 1px solid rgb(134 188 37 / 0.2);
   border-radius: 4px;
   overflow: hidden;
   box-shadow: var(--shadow-inset-top), var(--shadow-card);
@@ -1767,7 +1767,7 @@ a:hover {
   font-weight: 700;
   letter-spacing: 0.1em;
   color: var(--color-text);
-  border-bottom: 2px solid rgb(47 125 79 / 0.35);
+  border-bottom: 2px solid rgb(134 188 37 / 0.35);
   background: transparent;
   vertical-align: bottom;
 }
@@ -1793,7 +1793,7 @@ a:hover {
 }
 
 .data-table--spec tbody tr:hover td {
-  background: rgb(47 125 79 / 0.08);
+  background: rgb(134 188 37 / 0.08);
 }
 
 .data-table--spec td:first-child {
@@ -1857,8 +1857,8 @@ a:hover {
 .banner-success {
   padding: var(--sp-3);
   margin-bottom: var(--sp-4);
-  border: 1px solid rgb(47 125 79 / 0.4);
-  background: rgb(47 125 79 / 0.1);
+  border: 1px solid rgb(134 188 37 / 0.4);
+  background: rgb(134 188 37 / 0.1);
   color: #e8d48b;
   font-weight: 600;
 }
@@ -1923,7 +1923,7 @@ a:hover {
 .form-group select:focus {
   outline: none;
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 2px rgb(47 125 79 / 0.25);
+  box-shadow: 0 0 0 2px rgb(134 188 37 / 0.25);
 }
 
 .honeypot {
@@ -1985,7 +1985,7 @@ a:hover {
   background: var(--color-accent);
   color: #e8f2ec;
   box-shadow:
-    0 4px 20px rgb(47 125 79 / 0.4),
+    0 4px 20px rgb(134 188 37 / 0.4),
     0 2px 8px rgb(0 0 0 / 0.35);
   text-decoration: none;
   transition:
@@ -1999,7 +1999,7 @@ a:hover {
   color: #f4faf6;
   transform: scale(1.06);
   box-shadow:
-    0 6px 28px rgb(61 148 97 / 0.35),
+    0 6px 28px rgb(154 198 52 / 0.35),
     0 2px 10px rgb(0 0 0 / 0.35);
 }
 

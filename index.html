@@ -46,24 +46,35 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
+  <header class="site-header" id="site-header">
     <div class="header-inner">
       <a class="logo" href="#top">
-        <img class="logo__img" src="assets/images/logo.png" alt="" width="44" height="44" decoding="async">
-        <span class="logo__wordmark font-display">Silica Flour</span>
+        <span class="logo__mark" aria-hidden="true">
+          <svg class="logo__monogram" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 3.5 34.5 12 34.5 28 20 36.5 5.5 28 5.5 12z" stroke="currentColor" stroke-width="1.15" vector-effect="non-scaling-stroke" fill="none"/>
+            <path d="M20 9.5 29.5 15 29.5 25 20 30.5 10.5 25 10.5 15z" stroke="currentColor" stroke-width="0.6" opacity="0.4" vector-effect="non-scaling-stroke" fill="none"/>
+          </svg>
+          <span class="logo__initials">SF</span>
+        </span>
+        <span class="logo__text">
+          <span class="logo__name">Silica Flour</span>
+          <span class="logo__tagline">Est. 1988 · High Purity Silica</span>
+        </span>
       </a>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-        <span class="nav-toggle__bar" aria-hidden="true"></span>
+        <span class="nav-toggle__line" aria-hidden="true"></span>
+        <span class="nav-toggle__line" aria-hidden="true"></span>
+        <span class="nav-toggle__line" aria-hidden="true"></span>
       </button>
       <nav id="site-nav" class="site-nav" aria-label="Primary">
-        <ul>
-          <li><a href="#top" data-nav class="is-active" aria-current="location">Home</a></li>
-          <li><a href="#about" data-nav>About</a></li>
-          <li><a href="#why-us" data-nav>Why Us</a></li>
-          <li><a href="#industries" data-nav>Industries</a></li>
-          <li><a href="#process" data-nav>Process</a></li>
-          <li><a href="#products" data-nav>Products</a></li>
-          <li><a href="#contact" data-nav>Contact</a></li>
+        <ul class="site-nav__list">
+          <li><a href="#top" class="nav__link is-active" data-nav aria-current="location">Home</a></li>
+          <li><a href="#about" class="nav__link" data-nav>About</a></li>
+          <li><a href="#why-us" class="nav__link" data-nav>Why Us</a></li>
+          <li><a href="#industries" class="nav__link" data-nav>Industries</a></li>
+          <li><a href="#process" class="nav__link" data-nav>Process</a></li>
+          <li><a href="#products" class="nav__link" data-nav>Products</a></li>
+          <li><a href="#contact" class="nav__link nav__link--cta" data-nav>Contact</a></li>
         </ul>
       </nav>
     </div>

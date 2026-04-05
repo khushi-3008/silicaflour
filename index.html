@@ -50,17 +50,29 @@
 
   <header class="site-header" id="site-header">
     <div class="header-inner">
-      <a class="logo" href="#top">
-        <img
-          class="logo__mark-img"
-          src="assets/images/logo.png"
-          alt=""
-          width="462"
-          height="181"
-          decoding="async"
-        >
-        <span class="logo__name">Silica <span class="logo__name-accent">Flour</span></span>
-      </a>
+      <div class="header-brand">
+        <a class="logo" href="#top">
+          <img
+            class="logo__mark-img"
+            src="assets/images/logo.png"
+            alt=""
+            width="462"
+            height="181"
+            decoding="async"
+          >
+          <span class="logo__name">Silica <span class="logo__name-accent">Flour</span></span>
+        </a>
+        <span class="header-brand__rule" aria-hidden="true"></span>
+        <div class="header-owner" aria-label="Business owner">
+          <span class="header-owner__icon-wrap" aria-hidden="true">
+            <span class="header-owner__icon" data-lucide="user-round"></span>
+          </span>
+          <p class="header-owner__text">
+            <span class="header-owner__label">Owner</span>
+            <strong class="header-owner__name">Parag Suthar</strong>
+          </p>
+        </div>
+      </div>
       <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
         <span class="nav-toggle__line" aria-hidden="true"></span>
         <span class="nav-toggle__line" aria-hidden="true"></span>
@@ -75,17 +87,6 @@
           <li><a href="#process" class="nav__link" data-nav>Process</a></li>
           <li><a href="#products" class="nav__link" data-nav>Products</a></li>
           <li><a href="#contact" class="nav__link nav__link--cta" data-nav>Contact</a></li>
-          <li class="site-nav__item--owner">
-            <div class="header-owner" aria-label="Business owner">
-              <span class="header-owner__icon-wrap" aria-hidden="true">
-                <span class="header-owner__icon" data-lucide="user-round"></span>
-              </span>
-              <p class="header-owner__text">
-                <span class="header-owner__label">Parag Suthar</span>
-                <strong class="header-owner__name" href="tel:+919825313900">9825313900</strong>
-              </p>
-            </div>
-          </li>
         </ul>
       </nav>
     </div>

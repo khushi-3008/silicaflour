@@ -178,11 +178,35 @@ a:hover {
   }
 }
 
-/* Owner card beside Contact (nav) */
-.site-nav__item--owner {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+/* Logo + vertical rule + owner, then gap before nav */
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+@media (min-width: 768px) {
+  .header-brand {
+    flex: 0 1 auto;
+    margin-right: var(--sp-6);
+    gap: 0.75rem;
+  }
+}
+
+.header-brand__rule {
+  flex-shrink: 0;
+  width: 1px;
+  height: 1.85rem;
+  background: rgba(107, 143, 163, 0.45);
+  border-radius: 1px;
+}
+
+@media (min-width: 768px) {
+  .header-brand__rule {
+    height: 2.125rem;
+  }
 }
 
 .header-owner {
@@ -190,7 +214,7 @@ a:hover {
   align-items: center;
   gap: 0.55rem;
   margin: 0;
-  padding: 1rem 0.75rem;
+  padding: 0;
   min-width: 0;
 }
 
@@ -242,11 +266,31 @@ a:hover {
   letter-spacing: 0.02em;
 }
 
-@media (max-width: 767px) {
-  .site-nav__item--owner {
-    border-top: 1px solid rgba(107, 143, 163, 0.22);
-    margin-top: 0.35rem;
-    padding-top: 0.35rem;
+@media (max-width: 480px) {
+  .header-brand {
+    gap: 0.45rem;
+  }
+
+  .header-brand__rule {
+    height: 1.5rem;
+  }
+
+  .header-owner__icon-wrap {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .header-owner__icon svg {
+    width: 0.8125rem;
+    height: 0.8125rem;
+  }
+
+  .header-owner__label {
+    font-size: 0.5rem;
+  }
+
+  .header-owner__name {
+    font-size: 0.75rem;
   }
 }
 
@@ -257,9 +301,9 @@ a:hover {
   padding: 0 var(--sp-3);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   min-height: var(--header-main-mobile);
-  gap: var(--sp-3);
+  gap: var(--sp-2);
 }
 
 @media (min-width: 768px) {
@@ -335,6 +379,8 @@ a:hover {
   width: 2.75rem;
   height: 2.75rem;
   padding: 0;
+  margin-left: auto;
+  flex-shrink: 0;
   border: 1px solid rgba(107, 143, 163, 0.35);
   border-radius: var(--radius);
   background: rgba(255, 255, 255, 0.04);
@@ -486,6 +532,10 @@ a:hover {
     display: none;
   }
 
+  .header-inner {
+    gap: var(--sp-3);
+  }
+
   .site-nav {
     display: block;
     position: static;
@@ -494,6 +544,8 @@ a:hover {
     background: transparent;
     backdrop-filter: none;
     box-shadow: none;
+    margin-left: auto;
+    flex-shrink: 0;
   }
 
   .site-nav.is-open {
@@ -526,18 +578,9 @@ a:hover {
     bottom: 0.1rem;
   }
 
-  .site-nav__item--owner {
-    margin-left: 0.2rem;
-    margin-right: 0.05rem;
-  }
-
-  .header-owner {
-    padding: 0.35rem 0.5rem 0.35rem 0.35rem;
-  }
-
   .nav__link--cta {
     margin-top: 0;
-    margin-left: 0.25rem;
+    margin-left: 0.35rem;
     padding: 0.5rem 1.1rem;
   }
 }

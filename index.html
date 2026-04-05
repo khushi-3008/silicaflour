@@ -51,10 +51,21 @@
   <header class="site-header" id="site-header">
     <div class="header-topbar">
       <div class="container header-topbar__inner">
-        <p class="header-topbar__owner">
-          <strong class="header-topbar__name">Parag Suthar</strong>
-        </p>
-        <a class="header-topbar__tel" href="tel:+919825313900">+91 98253 13900</a>
+        <div class="header-topbar__group header-topbar__group--owner">
+          <span class="header-topbar__icon-wrap" aria-hidden="true">
+            <span class="header-topbar__icon" data-lucide="user-round"></span>
+          </span>
+          <p class="header-topbar__owner">
+            <span class="header-topbar__label">Owner</span>
+            <strong class="header-topbar__name">Parag Suthar</strong>
+          </p>
+        </div>
+        <a class="header-topbar__tel" href="tel:+919825313900">
+          <span class="header-topbar__icon-wrap header-topbar__icon-wrap--tel" aria-hidden="true">
+            <span class="header-topbar__icon" data-lucide="phone"></span>
+          </span>
+          <span class="header-topbar__tel-text">+91 98253 13900</span>
+        </a>
       </div>
     </div>
     <div class="header-inner">

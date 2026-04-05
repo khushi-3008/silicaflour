@@ -49,6 +49,14 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header" id="site-header">
+    <div class="header-topbar">
+      <div class="container header-topbar__inner">
+        <p class="header-topbar__owner">
+          <strong class="header-topbar__name">Parag Suthar</strong>
+        </p>
+        <a class="header-topbar__tel" href="tel:+919825313900">+91 98253 13900</a>
+      </div>
+    </div>
     <div class="header-inner">
       <a class="logo" href="#top">
         <img
@@ -556,11 +564,11 @@
             <div id="form-thanks" class="banner-success" role="status" hidden>
               <p>Thank you. Your message has been sent—we will reply shortly.</p>
             </div>
-            <!-- Replace YOUR_FORMSPREE_ID with your Form ID from https://formspree.io/ -->
+            <!-- Production: GitHub Actions replaces __FORMSPREE_ACTION__ from repo secret FORMSPREE_FORM_ENDPOINT -->
             <form
               id="contact-form"
               class="contact-form"
-              action="https://formspree.io/f/YOUR_FORMSPREE_ID"
+              action="__FORMSPREE_ACTION__"
               method="post"
             >
               <input type="hidden" name="_subject" value="Silica Flour website enquiry">
@@ -610,7 +618,7 @@
               </div>
               <button type="submit" class="btn btn--primary">Send enquiry</button>
             </form>
-            <p class="form-note">Submissions are delivered via <a href="https://formspree.io/" rel="noopener noreferrer">Formspree</a>. See their <a href="https://formspree.io/legal/privacy-policy/" rel="noopener noreferrer">privacy policy</a>. Replace <code>YOUR_FORMSPREE_ID</code> in the form <code>action</code> with your endpoint after signup.</p>
+            <!-- <p class="form-note">Submissions are delivered via <a href="https://formspree.io/" rel="noopener noreferrer">Formspree</a>. See their <a href="https://formspree.io/legal/privacy-policy/" rel="noopener noreferrer">privacy policy</a>. For GitHub Pages deploys, the form <code>action</code> is set from the <code>FORMSPREE_FORM_ENDPOINT</code> repository secret (see <code>DEPLOY.md</code>).</p> -->
           </div>
         </div>
       </div>

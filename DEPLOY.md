@@ -31,6 +31,8 @@ You can deploy in two ways. **Pick one host for your custom domain** (`silicaflo
 3. **Branch**: `main`, folder **`/ (root)`**
 4. Save. Every `git push` to `main` updates the site in about a minute.
 
+> **Contact form:** With branch deploy, **`index.html` still contains `__FORMSPREE_ACTION__`**—the form will not submit until you either set `action` to your real Formspree URL in the file (and accept it in git) or switch to **GitHub Actions** and the `FORMSPREE_FORM_ENDPOINT` secret (recommended).
+
 **Option 2 — Automated via GitHub Actions (this repo includes a workflow)**
 
 The file [`.github/workflows/deploy-github-pages.yml`](.github/workflows/deploy-github-pages.yml) deploys on every push to `main`.
@@ -103,10 +105,26 @@ The form posts to **Formspree** (see below). It works the same on GitHub Pages a
 
 ## Part C — Formspree (both hosts)
 
-1. Create a form at [Formspree](https://formspree.io/).
-2. In **`index.html`** (contact section form), set `action` to `https://formspree.io/f/<your-id>` (replace `YOUR_FORMSPREE_ID`).
-3. **`_next`** should match your **live** home URL with the thank-you query string, e.g. **`https://silicaflour.in/?thanks=1`**. That shows the success message in the **Contact** section after redirect.
-4. If you test on `*.github.io` or `*.vercel.app` before the custom domain is live, temporarily set `_next` to that origin with `/?thanks=1`.
+### GitHub Pages (Actions deploy)
+
+The contact form’s `action` in **`index.html`** is the placeholder **`__FORMSPREE_ACTION__`**. The workflow **injects your real endpoint at deploy time** so the value is not committed in plain text.
+
+1. Create a form at [Formspree](https://formspree.io/) and copy the full form URL (e.g. `https://formspree.io/f/abcxyz`).
+2. In the GitHub repo: **Settings → Secrets and variables → Actions → New repository secret**.
+   - **Name:** `FORMSPREE_FORM_ENDPOINT`
+   - **Value:** the full URL (same as you would paste into `action=""`).
+3. Push to `main`; the **Deploy GitHub Pages** workflow replaces the placeholder before upload. If the secret is missing, the workflow fails with a clear error.
+
+**Local / branch-only preview:** Either add the secret and rely on Actions artifacts, or temporarily replace `__FORMSPREE_ACTION__` in `index.html` locally (do not commit the real URL if you want it to stay secret).
+
+### `_next` redirect after submit
+
+1. In **`index.html`**, the hidden **`_next`** field should match your **live** home URL with the thank-you query string, e.g. **`https://silicaflour.in/?thanks=1`**. That shows the success message in the **Contact** section after redirect.
+2. If you test on `*.github.io` or `*.vercel.app` before the custom domain is live, temporarily set `_next` to that origin with `/?thanks=1`.
+
+### Vercel or “deploy from branch” (no Actions inject)
+
+If you do **not** use the inject step, set the form `action` in **`index.html`** to `https://formspree.io/f/<your-id>` yourself, or add a small build script that substitutes the placeholder using a Vercel env var.
 
 ---
 
@@ -126,6 +144,7 @@ Use **one** primary domain target for `silicaflour.in`; use the other platform w
 ## Troubleshooting
 
 - **Pages Actions fail**: **Settings → Actions → General** → allow workflows; **Pages** source must be **GitHub Actions** when using the included workflow.
+- **“Set repository secret FORMSPREE_FORM_ENDPOINT”**: Add **Settings → Secrets and variables → Actions** → **FORMSPREE_FORM_ENDPOINT** with your full Formspree URL (`https://formspree.io/f/...`). The deploy workflow fails on purpose if it is missing.
 - **404 on old URLs**: Older deployments may have linked to `about.html`, `contact.html`, etc. Those files were removed; use **`/`** only. Optionally add static redirects on the host if you need legacy URLs.
 - **Form redirect after submit**: The form’s `_next` must use the exact origin visitors use (custom domain vs `github.io` vs `vercel.app`), always ending with **`/?thanks=1`**.
 - **Vercel / “main.py” / Python runtime**: This project has **no** Python files. If a platform tries to run Python, set the project to **Other** / static and remove any accidental `main.py` or `requirements.txt` from the repo.

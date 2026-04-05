@@ -30,6 +30,26 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      - name: Inject Formspree endpoint
+        env:
+          FORMSPREE_FORM_ENDPOINT: ${{ secrets.FORMSPREE_FORM_ENDPOINT }}
+        run: |
+          python3 << 'PY'
+          import os
+          from pathlib import Path
+          endpoint = (os.environ.get("FORMSPREE_FORM_ENDPOINT") or "").strip()
+          if not endpoint:
+              print("::error::Set repository secret FORMSPREE_FORM_ENDPOINT to your full Formspree URL, e.g. https://formspree.io/f/xxxxxxxx")
+              raise SystemExit(1)
+          path = Path("index.html")
+          text = path.read_text(encoding="utf-8")
+          token = "__FORMSPREE_ACTION__"
+          if token not in text:
+              print("::error::index.html is missing placeholder", token)
+              raise SystemExit(1)
+          path.write_text(text.replace(token, endpoint), encoding="utf-8")
+          PY
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

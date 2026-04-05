@@ -461,7 +461,6 @@ a:hover {
   font-weight: 500;
   font-size: 0.8125rem;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
   border-radius: var(--radius);
   transition: color 0.2s ease;
 }

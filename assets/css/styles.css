@@ -255,14 +255,14 @@ a:hover {
   text-transform: uppercase;
   letter-spacing: 0.16em;
   font-weight: 600;
-  font-size: 0.5625rem;
+  font-size: 0.8125rem;
   color: #fff;
 }
 
 .header-owner__name {
   font-weight: 600;
-  font-size: 0.8125rem;
-  color: var(--color-header-text-muted);;
+  font-size: 0.5625rem;
+  color: var(--color-header-text);
   letter-spacing: 0.02em;
 }
 

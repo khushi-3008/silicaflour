@@ -7,9 +7,9 @@
   --ink-soft: #3a3a3a;
   --paper: #faf9f6;
   --paper-warm: #f2f0eb;
-  --accent: #22c55e;
-  --accent-light: #4ade80;
-  --gold: #16a34a;
+  --accent: #2f7d4f;
+  --accent-light: #3d9461;
+  --gold: #256645;
   --trim-w: 3.5in;
   --trim-h: 2in;
   --bleed: 0.125in;
@@ -119,14 +119,14 @@ body {
 .card-front .card-face {
   background: var(--paper);
   background-image:
-    radial-gradient(ellipse 120% 80% at 100% 0%, rgba(34, 197, 94, 0.08) 0%, transparent 55%),
-    radial-gradient(ellipse 80% 60% at 0% 100%, rgba(22, 163, 74, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 120% 80% at 100% 0%, rgba(47, 125, 79, 0.08) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 60% at 0% 100%, rgba(37, 102, 69, 0.06) 0%, transparent 50%),
     repeating-linear-gradient(
       -12deg,
       transparent,
       transparent 3px,
-      rgba(34, 197, 94, 0.04) 3px,
-      rgba(34, 197, 94, 0.04) 4px
+      rgba(47, 125, 79, 0.04) 3px,
+      rgba(47, 125, 79, 0.04) 4px
     );
   display: flex;
   flex-direction: column;
@@ -211,7 +211,7 @@ body {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.55), rgba(74, 222, 128, 0.45), transparent);
+  background: linear-gradient(90deg, transparent, rgba(47, 125, 79, 0.5), rgba(61, 148, 97, 0.4), transparent);
 }
 
 .card-back__pattern {
@@ -246,7 +246,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(134, 239, 172, 0.9);
+  color: rgba(122, 175, 143, 0.92);
 }
 
 .card-back__list {
@@ -284,7 +284,7 @@ body {
   width: 0.16in;
   height: 0.16in;
   margin-top: 0.01in;
-  color: #22c55e;
+  color: #2f7d4f;
 }
 
 .card-back__icon svg {

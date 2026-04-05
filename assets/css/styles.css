@@ -980,6 +980,81 @@ a:hover {
   font-weight: 500;
 }
 
+/* Product specification table — premium B2B treatment */
+.table-wrap--spec {
+  margin-top: var(--sp-6);
+  border: 1px solid rgba(61, 95, 122, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 12px 40px rgba(18, 26, 34, 0.07);
+  background: var(--color-surface);
+}
+
+.data-table--spec {
+  font-size: 0.8125rem;
+  line-height: 1.55;
+}
+
+.data-table--spec thead {
+  background: linear-gradient(180deg, #e9eef5 0%, #dfe8f2 100%);
+}
+
+.data-table--spec th {
+  padding: 1rem 1.15rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-text);
+  border-bottom: 2px solid rgba(61, 95, 122, 0.35);
+  background: transparent;
+  vertical-align: bottom;
+}
+
+.data-table--spec th:not(:last-child),
+.data-table--spec td:not(:last-child) {
+  border-right: 1px solid rgba(197, 205, 214, 0.85);
+}
+
+.data-table--spec td {
+  padding: 1rem 1.15rem;
+  vertical-align: top;
+  border-bottom-color: rgba(197, 205, 214, 0.65);
+  transition: background-color 0.2s ease;
+}
+
+.data-table--spec tbody tr {
+  background: var(--color-surface);
+}
+
+.data-table--spec tbody tr:nth-child(even) {
+  background: rgba(238, 242, 246, 0.55);
+}
+
+.data-table--spec tbody tr:hover td {
+  background: rgba(61, 95, 122, 0.07);
+}
+
+.data-table--spec td:first-child {
+  font-weight: 600;
+  font-size: 0.84375rem;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .data-table--spec td:first-child {
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .data-table--spec td {
+    transition: none;
+  }
+}
+
 /* ——— Contact ——— */
 .grid-contact {
   display: grid;

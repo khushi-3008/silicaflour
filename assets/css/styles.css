@@ -256,7 +256,7 @@ a:hover {
   letter-spacing: 0.16em;
   font-weight: 600;
   font-size: 0.5625rem;
-  color: var(--color-header-text-muted);
+  color: #fff;
 }
 
 .header-owner__name {
